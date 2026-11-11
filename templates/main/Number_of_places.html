@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block extend_head %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<h3>Enter the Number of places</h3>
+<form  action = 'route/' method='post' id='form' >
+{% csrf_token %}
+<div class="container">
+
+   <label for="id-number_of_places">Number of places Between 2 and 10</label>
+   <select id="id-number_of_places" name='number_of_places' size = "1" onchange="this.form.submit()">
+        <option value = '7'>7</option>
+
+    </select>
+</div>
+</form>
+{% endblock %}

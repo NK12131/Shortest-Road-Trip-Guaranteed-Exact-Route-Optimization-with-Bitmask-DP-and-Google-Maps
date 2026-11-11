@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block extend_head %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<h3>Enter the places</h3>
+
+
+<div class="container">
+  {% comment %} {% for i in number_of_cities%}
+  <label for="id-google-address-{{i}}">Point {{i}}</label>
+  <input type="text" placeholder="*Begin typing address" id="id-google-address-{{i}}" name="google_address_{{i}}">
+  <input type="hidden" class="geo" id="id-lat-{{i}}" value="">
+  <input type="hidden" class="geo" id="id-long-{{i}}" value="">
+  {% endfor %} {% endcomment %}
+ <label for="id-google-address-a">Way point 1</label>
+   <input type="text" placeholder="*Begin typing address" id="id-google-address-a" name="google_address_a">
+   
+   <label for="id-google-address-c">Way point 2</label>
+   <input type="text" placeholder="*Begin typing address" id="id-google-address-c" name="google_address_c">
+
+   <label for="id-google-address-d">Way point 3</label>
+   <input type="text" placeholder="*Begin typing address" id="id-google-address-d" name="google_address_d">
+
+   <label for="id-google-address-e">Way point 4</label>
+   <input type="text" placeholder="*Begin typing address" id="id-google-address-e" name="google_address_e">
+
+   <label for="id-google-address-f">Way point 5</label>
+   <input type="text" placeholder="*Begin typing address" id="id-google-address-f" name="google_address_f">
+
+   <label for="id-google-address-g">Way point 6</label>
+   <input type="text" placeholder="*Begin typing address" id="id-google-address-g" name="google_address_g">
+
+   <label for="id-google-address-b">Way point 7</label>
+   <input type="text" placeholder="*Begin typing address" id="id-google-address-b" name="google_address_b"> 
+
+
+   <input type="hidden" class="geo" id="id-lat-a" value="">
+   <input type="hidden" class="geo" id="id-long-a" value="">
+   <input type="hidden" class="geo" id="id-lat-b" value="">
+   <input type="hidden" class="geo" id="id-long-b" value="">
+   <input type="hidden" class="geo" id="id-lat-c" value="">
+   <input type="hidden" class="geo" id="id-long-c" value="">
+   <input type="hidden" class="geo" id="id-lat-d" value="">
+   <input type="hidden" class="geo" id="id-long-d" value=""> 
+   <input type="hidden" class="geo" id="id-lat-e" value="">
+   <input type="hidden" class="geo" id="id-long-e" value=""> 
+   <input type="hidden" class="geo" id="id-lat-f" value="">
+   <input type="hidden" class="geo" id="id-long-f" value=""> 
+   <input type="hidden" class="geo" id="id-lat-g" value="">
+   <input type="hidden" class="geo" id="id-long-g" value=""> 
+
+
+</div>
+
+{% endblock %}
+
+{% block extend_footer %}
+
+
+    <script type="text/javascript">
+
+      var google_api_key = "{{google_api_key|safe}}";
+      var base_country = "{{base_country|safe}}";
+
+    </script>
+
+  <script src="{% static 'google_places_waypoints.js' %}"></script>
+
+
+{% endblock %}
